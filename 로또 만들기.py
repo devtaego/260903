@@ -109,6 +109,7 @@ while True:
             for i in range (1,roundnum+1):
                 print(f"{i} 회차 추천번호는 :  {eryuk[2*i-2]} 입니다!")
             print()
+        # print(eryuk)
     elif selectnum == 4:
         print("로그아웃 합니다.")
         break
