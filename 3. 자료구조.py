@@ -46,4 +46,7 @@ new_nums = list(nums)
 nums = [1,2,3]
 new_nums = nums
 
-clear() / copy()
+# 값 초기화
+clear() = 초기화       # 클리어 사용시 (얕은 복사)
+# 값을 새로 복사
+copy()

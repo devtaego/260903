@@ -19,10 +19,12 @@
 
 import random
 
+eryuk = []
+count = 0
 print("로또 자동 입력사이트에 오신 것을 환영합니다!")
 
 while True:
-    print("원하시는 번호를 눌러주세요! 1. 자동 번호 추출 / 2. 수동 번호 입력 / 3. 로그아웃")
+    print("원하시는 번호를 눌러주세요! 1. 자동 번호 추출 / 2. 수동 번호 입력 / 3. 이력보기 / 4. 로그아웃")
     selectnum = int(input())
 
     # 메뉴를 선택할 때마다 로또 번호 초기화
@@ -44,6 +46,11 @@ while True:
 
         print("입니다!")
         print()
+        count +=1
+        eryuk.append(lotto)
+        eryuk.append(count)
+
+
 
     elif selectnum == 2:
 
@@ -87,7 +94,22 @@ while True:
         print("입니다!")
         print()
 
+        count += 1
+        eryuk.append(lotto)
+        eryuk.append(count)
+
     elif selectnum == 3:
+
+        roundnum = (round(len(eryuk) * 1/2))
+
+        if roundnum == 0 :
+            print("아직 회차 정보가 없습니다!")
+
+        else :
+            for i in range (1,roundnum+1):
+                print(f"{i} 회차 추천번호는 :  {eryuk[2*i-2]} 입니다!")
+            print()
+    elif selectnum == 4:
         print("로그아웃 합니다.")
         break
 
